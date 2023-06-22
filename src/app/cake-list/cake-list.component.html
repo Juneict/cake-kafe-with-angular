@@ -1,4 +1,5 @@
 <div class="container">
+    <button mat-raised-button (click)="openDialog()"><mat-icon aria-hidden="false" aria-label="" fontIcon="add">add</mat-icon>Add Cake</button>
     <table>
         <thead>
             <tr>
@@ -20,7 +21,7 @@
                     <td>{{cake.size}}</td>
                     <td>{{cake.price}}</td>
                     <td>
-                        <button (click)="goToDetail(cake)">View</button>
+                        <button mat-raised-button (click)="goToDetail(cake)">View</button>
                     </td>
                 <tr>
         </tbody>

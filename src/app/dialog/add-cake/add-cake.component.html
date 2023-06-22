@@ -1,0 +1,43 @@
+<h1 mat-dialog-title>Add Cake</h1>
+<div mat-dialog-content>
+    <form class="example-form">
+        <mat-form-field class="example-full-width">
+          <mat-label>Cake Name</mat-label>
+          <input matInput placeholder="Enter Cake Name" value="">
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+            <mat-label>Cake Type</mat-label>
+            <mat-select>
+                <mat-option *ngFor="let cakeType of cakeTypes" [value]="cakeType.name">
+                  {{cakeType.name}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+        <mat-label>Cake Size</mat-label>
+        <mat-select>
+            <mat-option *ngFor="let cakeSize of cakeSizes" [value]="cakeSize.name">
+              {{cakeSize.name}}
+            </mat-option>
+        </mat-select>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+        <mat-label>Cake Price</mat-label>
+        <input matInput placeholder="Enter Cake Price" value="">
+        </mat-form-field>
+      
+        <mat-form-field class="example-full-width">
+          <mat-label>Cake Description</mat-label>
+          <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
+        </mat-form-field>
+      </form>
+</div>
+<div mat-dialog-actions>
+
+  <button mat-button color="primary" (click)="onNoClick()">Save</button>
+
+  <button mat-button color="warn" (click)="onNoClick()">Cancle</button>
+
+</div>

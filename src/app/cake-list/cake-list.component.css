@@ -3,6 +3,7 @@ h1{
 }
 .container{
     width: 100%;
+    padding: 20px;
 }
 table{
     width: 60%;
@@ -18,7 +19,7 @@ tr{
 button{
     background-color: rgb(175, 205, 231);
     color: #fff;
-    padding: 10px;
+    margin-bottom: 10px;
 }
 label{
     color: #5b5858;

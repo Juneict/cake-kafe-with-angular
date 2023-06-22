@@ -13,13 +13,21 @@ import {MatMenuModule} from '@angular/material/menu';
 import { MatButtonModule } from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 import {MatIconModule} from '@angular/material/icon';
+import {MatDialog, MAT_DIALOG_DATA, MatDialogRef, MatDialogModule} from '@angular/material/dialog';
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { AddCakeComponent } from './dialog/add-cake/add-cake.component';
+import {MatSelectModule} from '@angular/material/select';
+import { HomeComponent } from './home/home.component';
 @NgModule({
   declarations: [
     AppComponent,
     CakeComponent,
     CakeDetailComponent,
     CakeListComponent,
-    CakeListDetailComponent
+    CakeListDetailComponent,
+    AddCakeComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +37,11 @@ import {MatIconModule} from '@angular/material/icon';
     MatMenuModule,
     MatButtonModule,
     MatCardModule,
-    MatIconModule
+    MatIconModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatDialogModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from "@angular/router";
-
+import { MatDialog } from '@angular/material/dialog';
+import { AddCakeComponent } from '../dialog/add-cake/add-cake.component';
 @Component({
   selector: 'app-cake-list',
   templateUrl: './cake-list.component.html',
@@ -8,12 +9,24 @@ import { Router } from "@angular/router";
 })
 export class CakeListComponent implements OnInit {
 
-  constructor( private router: Router,) { 
+  constructor( private router: Router, private dialog: MatDialog) { 
     
   }
 
   ngOnInit(): void {
   }
+  openDialog(): void {
+    const dialogRef = this.dialog.open(AddCakeComponent, {
+      width: '250px',
+    });
+    dialogRef.componentInstance.closeDialog.subscribe((result)=>dialogRef.close()
+    )
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+      // Perform any necessary actions after the dialog is closed
+    });
+  }
+  
   cakelists = [
     {
       id:1,
