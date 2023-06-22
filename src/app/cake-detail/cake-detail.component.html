@@ -1,0 +1,36 @@
+<div *ngIf="cake" class="container">
+    <h1>Cake Detail</h1>
+    <div>
+        <!-- <p>Name : {{cake.name}}</p>
+        <p>Price : {{cake.price}}</p>
+        <p>Size : {{cake.size}}</p> -->
+        <div>
+            <label for="">Name</label>
+            <input [(ngModel)]="cake.name" disabled="true">
+        </div>
+        <br>
+       <div>
+            <label for="">Price</label>
+            <input [(ngModel)]="cake.price" disabled="true">
+       </div>
+       <br>
+       <div>
+            <label for="">Size</label>
+            <input [(ngModel)]="cake.size" disabled="true">
+        </div> 
+        <br>
+        <div>
+            <label for="">Type</label>
+            <input [(ngModel)]="cake.type" disabled="true">
+        </div> 
+        <br>
+    </div>
+    <div>
+        <img src="{{cake.photo}}" alt="">
+    </div>
+    <div>
+        <button (click)="cake =!cake">Close</button>
+        <!-- <button class="success" (click)="updateCake(cake)">update</button>
+        <button class="danger" (click)="deleteCake(cake)">Delete</button> -->
+    </div>
+</div>

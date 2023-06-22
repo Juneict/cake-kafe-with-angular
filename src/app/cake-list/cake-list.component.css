@@ -1,0 +1,35 @@
+h1{
+    text-align: center;
+}
+.container{
+    width: 100%;
+}
+table{
+    width: 60%;
+}
+th{
+    background-color: rgb(175, 205, 231);
+    padding: 10px;
+}
+tr{
+    border-bottom: 1px solid rgb(72, 70, 70);
+    text-align: center;
+}
+button{
+    background-color: rgb(175, 205, 231);
+    color: #fff;
+    padding: 10px;
+}
+label{
+    color: #5b5858;
+    padding: 10px;
+}
+input{
+    border: none;
+    border-bottom: 1px solid #5b5858;
+    padding: 5px;
+    background-color: #dbd6d6;
+}
+.title{
+    color: rgb(175, 205, 231);
+}

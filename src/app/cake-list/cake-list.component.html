@@ -1,0 +1,28 @@
+<div class="container">
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Photo</th>
+                <th>Type</th>
+                <th>Size</th>
+                <th>Price</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+                <tr *ngFor="let cake of cakelists">
+                    <td>{{cake.name}}</td>
+                    <td>
+                        <img src="{{cake.photo}}" alt="" width="100" height="100">
+                    </td>
+                    <td>{{cake.type}}</td>
+                    <td>{{cake.size}}</td>
+                    <td>{{cake.price}}</td>
+                    <td>
+                        <button (click)="goToDetail(cake)">View</button>
+                    </td>
+                <tr>
+        </tbody>
+    </table>
+</div>

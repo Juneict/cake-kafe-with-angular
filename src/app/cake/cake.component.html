@@ -1,0 +1,63 @@
+<h1 class="title">Cake List</h1>
+<div *ngIf="appState == 'default'">
+    <form (submit)="addCake()">
+        <div>
+            <label for="">Name</label>
+            <input type="text" [(ngModel)]="name" name="name" min="0" max= "10">
+            <label for="">Type</label>
+            <input type="text" [(ngModel)]="type" name="type" min="0" max= "10">
+            <label for="">Size</label>
+            <input type="text" [(ngModel)]="size" name="size" min="0" max= "10">
+            <label for="">Price</label>
+            <input type="text" [(ngModel)]="price" name="price" min="0" max= "10">
+            <button type="submit" style="margin-left: 10px;">Save</button>
+        </div>
+    </form>
+</div>
+<div *ngIf="appState == 'edit'">
+    <form (submit)="updateCake()">
+        <div>
+            <label for="">Name</label>
+            <input type="text" [(ngModel)]="name" name="name" min="0" max= "100">
+            <label for="">Type</label>
+            <input type="text" [(ngModel)]="type" name="type" min="0" max= "100">
+            <label for="">Size</label>
+            <input type="text" [(ngModel)]="size" name="size" min="0" max= "100">
+            <label for="">Price</label>
+            <input type="text" [(ngModel)]="price" name="price" min="0" max= "100">
+
+            <button type="submit" style="margin-left: 10px;">Update</button>
+        </div>
+    </form>
+</div>
+<div class="container">
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Photo</th>
+                <th>Type</th>
+                <th>Size</th>
+                <th>Price</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+                <tr *ngFor="let cake of cakes">
+                    <td>{{cake.name}}</td>
+                    <td>
+                        <img src="{{cake.photo}}" alt="" width="100" height="100">
+                    </td>
+                    <td>{{cake.type}}</td>
+                    <td>{{cake.size}}</td>
+                    <td>{{cake.price}}</td>
+                    <td>
+                        <button (click)="onSelect(cake)">View</button>
+                        <button (click)="editCake(cake)" style="margin-left: 10px;background-color: green;">Edit</button>
+                        <button (click)="deleteCake(cake.name)" style="margin-left: 10px;background-color: crimson;">Del</button>
+                    </td>
+                <tr>
+        </tbody>
+    </table>
+</div>
+<app-cake-detail [cake]="selectedCake" (cakeDelete)="DeleteFunction($event)" (cakeUpdate)="UpdateFunction($event)"></app-cake-detail>

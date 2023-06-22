@@ -1,0 +1,19 @@
+<div class="cake-detail-container">
+    <h3>Cake Details</h3>
+    <div *ngIf="cakeDetail" class="cake-cover">
+        <h2 class="cake-heading">Cake Detail</h2>
+        <div class="cake-data">
+            <span>Name : {{cakeDetail?.name}}</span> <br>
+            <span>Price : {{cakeDetail?.price}}</span> <br>
+            <span>Size : {{cakeDetail?.size}}</span>
+        </div>
+        <div class="cake-data">
+            <img src="{{cakeDetail?.photo}}">
+        </div>
+        <button class="close-btn" (click)="close()">Close</button>
+
+        <br>
+    </div>
+
+</div>
+<button [routerLink]="'/cakes'">Back to CakeList</button>

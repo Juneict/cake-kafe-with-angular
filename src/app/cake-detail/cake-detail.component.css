@@ -1,0 +1,27 @@
+.container{
+    position: absolute;
+    top: 10%;
+    left: 70%;
+}
+button{
+    background-color: rgb(175, 205, 231);
+    color: #fff;
+    padding: 10px;
+    margin: 10px;
+}
+label{
+    color: rgb(173, 174, 175);
+    padding: 10px;
+}
+input{
+    color: gray;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid black;
+}
+.danger{
+    background-color: red;
+}
+.success{
+    background-color: green;
+}
