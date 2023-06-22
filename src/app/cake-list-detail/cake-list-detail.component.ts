@@ -11,6 +11,7 @@ export class CakeListDetailComponent implements OnInit {
   constructor( private router:Router, private activatedRoute:ActivatedRoute) { }
 
   cakeDetail: any;
+  imageUrl: string ="";
   cakeList = [
     {
       id:1,
@@ -49,6 +50,7 @@ export class CakeListDetailComponent implements OnInit {
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(event => {
       this.cakeDetail = this.cakeList.filter(item => item.id === Number(event['id']))[0];
+      this.imageUrl = this.cakeDetail;
      });
   }
   close(){

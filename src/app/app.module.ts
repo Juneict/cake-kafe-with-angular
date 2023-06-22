@@ -8,7 +8,11 @@ import { CakeDetailComponent } from './cake-detail/cake-detail.component';
 import { FormsModule } from '@angular/forms';
 import { CakeListComponent } from './cake-list/cake-list.component';
 import { CakeListDetailComponent } from './cake-list-detail/cake-list-detail.component';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatMenuModule} from '@angular/material/menu';
+import { MatButtonModule } from '@angular/material/button';
+import {MatCardModule} from '@angular/material/card';
+import {MatIconModule} from '@angular/material/icon';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +24,12 @@ import { CakeListDetailComponent } from './cake-list-detail/cake-list-detail.com
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    MatMenuModule,
+    MatButtonModule,
+    MatCardModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
